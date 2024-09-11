@@ -2791,7 +2791,7 @@ bot.add_handler( # type: ignore
         filters=filters.command(
             BotCommands.BotSetCommand,
             case_sensitive=True
-        ) & CustomFilters.sudo
+        ) & CustomFilters.owner
     )
 )
 bot.add_handler( # type: ignore
@@ -2799,6 +2799,6 @@ bot.add_handler( # type: ignore
         edit_bot_settings,
         filters=filters.regex(
             "^botset"
-        ) & CustomFilters.sudo
+        ) & CustomFilters.owner
     )
 )
